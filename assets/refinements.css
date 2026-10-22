@@ -204,3 +204,48 @@ footer.enquiry-footer .footer-legal,[data-theme=dark] footer.enquiry-footer .foo
 @media(max-width:1000px){.header{padding:10px var(--gutter) 0}.header .header-actions{right:14px}.header .brand .header-mark{width:36px;height:36px}.header .navigation,.header .navigation a{font-size:13px}.header .header-audit{font-size:10px}}
 @media(max-width:700px){:root{--hero-heading-size:clamp(34px,9.6vw,64px);--hero-body-size:16px;--hero-cta-size:12px}.hero h1{line-height:1.1}.header .header-inner{max-width:460px!important}.header .navigation,.header .navigation a{font-size:12px}.contact-overview{grid-template-columns:1fr;gap:35px}.contact-next.next-carousel{width:calc(100% - 20px);max-width:460px;justify-self:center}.enquiry-card .select-chevron{bottom:12px}}
 @media(max-width:380px){:root{--hero-heading-size:9.4vw}}
+
+/* Mobile polish: consistent optical centering and content-sized showcase frames. */
+.button .button-label{display:inline-flex;align-items:center;justify-content:center;line-height:1.2;transform:translateY(.075em)}
+.button .button-icon{border:0!important;outline:0;box-shadow:none!important}
+[data-theme=dark] .enquiry-card .form-actions .button{border:0!important;outline:0;box-shadow:none}
+[data-theme=dark] .enquiry-card .form-actions .button:focus-visible{outline:2px solid #080ED2;outline-offset:3px}
+.project-scope span,.service-tags span,.portfolio-filter,.work-filter{display:inline-flex;align-items:center;justify-content:center;line-height:1.25}
+.project-scope span,.service-tags span{padding-top:.65em;padding-bottom:.5em}
+.hero .lime-highlight:before,.lime-highlight:before{inset:0 -.06em -.06em;background:#B8F019}
+.hero .lime-highlight,.lime-highlight{line-height:1.1}
+.glass-review .review-topics{justify-self:end;align-items:flex-end;gap:10px}
+.glass-review .review-topics span{font-size:13px;line-height:1.4;justify-content:flex-end;color:#52605b}
+.header .nav-shell.glass-nav{border:0!important;outline:0;box-shadow:none!important;padding:6px 16px 6px 6px;background:rgba(34,38,46,.64);backdrop-filter:blur(30px) saturate(160%);-webkit-backdrop-filter:blur(30px) saturate(160%)}
+.header .brand.mark-brand,.header .brand .header-mark{width:38px;height:38px}
+.header .header-inner{height:58px!important}
+html:not([data-theme=dark]) .contact-next.next-carousel,html:not([data-theme=dark]) .next-carousel .contact-next-head,html:not([data-theme=dark]) .next-carousel .next-slides{background:#B8F019;color:#14171C}
+html:not([data-theme=dark]) .next-carousel .contact-next-head .section-label,html:not([data-theme=dark]) .next-carousel .next-step-number{color:#080ED2}
+html:not([data-theme=dark]) .next-carousel .next-slide p{color:#354122}
+/* Outgoing text clears before the next slide fades in. */
+.next-carousel .next-slide{transition:none;visibility:hidden;opacity:0}
+.next-carousel .next-slide.is-active{visibility:visible;opacity:1;transition:opacity .65s ease,transform .65s ease}
+@media(max-width:1000px){
+ .header .header-inner{height:auto!important}
+ .header .nav-shell.glass-nav{padding:7px 12px 0;gap:5px}
+ .header .brand.mark-brand,.header .brand .header-mark{width:34px;height:34px}
+ .header .header-actions{right:12px;top:24px;gap:10px}
+ .header .navigation{border:0;padding:0}
+ .header .navigation a{padding:9px 0!important}
+}
+@media(max-width:700px){
+ .hero-actions,.hero-copy .hero-actions{width:100%;max-width:330px;align-items:stretch!important;gap:16px}
+ .hero .hero-actions .button,.hero .hero-actions .tertiary-link{width:100%;max-width:none;min-height:46px;display:flex;align-items:center;justify-content:space-between;margin:0;box-sizing:border-box}
+ .hero .hero-actions .button{padding:7px 12px 7px 17px}
+ .hero .hero-actions .tertiary-link{padding:7px 12px 7px 17px}
+ .hero-actions .tertiary-link>span{line-height:1.2;transform:translateY(.075em)}
+ .enquiry-footer .enquiry-card,.contact-next.next-carousel{width:100%;max-width:none;justify-self:stretch;margin-left:0;margin-right:0}
+ .project-stage{height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:auto}
+ .project-stage .project-grid{position:relative;inset:auto;display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+ .project-stage .project-panel{grid-area:1/1;position:relative;inset:auto;min-height:0;height:auto;align-self:stretch;padding-bottom:40px}
+ .project-stage .project-backdrop{display:block;flex:none;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;padding:0!important}
+ .project-controls{bottom:0;background:none;padding:10px 18px}
+ .glass-review-caption{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);column-gap:15px}
+ .glass-review .review-topics span{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){.next-carousel .next-slide.is-active{transition:none}}
