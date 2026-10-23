@@ -1,0 +1,12 @@
+.submission-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+.submission-dialog{width:min(540px,calc(100% - 48px));max-height:calc(100dvh - 48px);overflow:auto;border:1px solid #353b45;border-radius:20px;padding:40px;background:#14171c;color:#fffef9}
+.submission-dialog::backdrop{background:#000b;backdrop-filter:blur(6px)}
+.submission-dialog>img{width:56px;height:56px;margin-bottom:24px}
+.submission-dialog .label{margin-bottom:22px}
+.submission-dialog h2{font-size:43px;line-height:1.12;margin-bottom:22px}
+.submission-dialog p{font-size:16px;line-height:1.65;margin-bottom:30px;color:#b4bbc6}
+.submission-close{position:absolute;right:20px;top:17px;font-size:27px;width:36px;height:36px;line-height:1;display:grid;place-items:center;border-radius:50%;background:#22262e;color:#fffef9}
+.form-status[data-state=error]{color:#a22330!important;font-weight:500;line-height:1.6}
+.form-status[data-state=success]{color:#205d31!important}
+[data-direct-form][aria-busy=true] .button{cursor:progress}
+@media(max-width:600px){.submission-dialog{padding:30px 24px}.submission-dialog h2{font-size:34px}.submission-dialog p{font-size:15px}.submission-dialog .button{max-width:100%;gap:14px}.submission-dialog .button-title{font-size:12px}}

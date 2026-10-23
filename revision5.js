@@ -13,6 +13,5 @@ document.querySelectorAll('[data-audit-open]').forEach(el=>el.addEventListener('
 dialog.querySelector('.audit-close').addEventListener('click',()=>dialog.close());
 dialog.addEventListener('click',event=>{if(event.target!==dialog)return;const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close()});
 dialog.addEventListener('close',()=>{document.body.classList.remove('audit-open');trigger?.focus({preventScroll:true})});
-form.addEventListener('submit',event=>{event.preventDefault();if(!form.reportValidity())return;const values=new FormData(form),clean=name=>String(values.get(name)||'').trim(),subject=`Free UX audit request — ${clean('company')}`,body=[`Name: ${clean('name')}`,`Email: ${clean('email')}`,`Company: ${clean('company')}`,`Website or app: ${clean('link')}`,'','What I’d like reviewed:',clean('review')].join('\n');try{sessionStorage.setItem('mavocado-revamp-enquiry',JSON.stringify({subject,body}));location.href='thank-you.html'}catch(_){form.querySelector('.form-status').textContent='Your browser could not save the request. Please email hello@mavocado.in.'}});
 if(location.hash==='#free-ux-audit'||new URLSearchParams(location.search).get('service')==='audit')openAudit([...document.querySelectorAll('[data-audit-open]')].find(el=>el.getClientRects().length));
 })();
