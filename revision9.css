@@ -1,0 +1,51 @@
+/* One solid navigation surface, with no glass or backdrop effects. */
+.site-header,.site-header.compact{background:#14171c!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
+.site-header .nav{background:#22262e!important;background-image:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border:1px solid #353b45!important}
+.mobile-menu{background:#14171c!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important}
+.review-viewport{scrollbar-width:none!important;-ms-overflow-style:none}
+.review-viewport::-webkit-scrollbar{display:none;width:0;height:0}
+/* Homepage type scale shared by all primary page heroes. */
+.hero h1,.page-hero h1,.contact-intro h1{font-size:clamp(60px,8.5vw,132px)!important;line-height:1.12!important;font-weight:500;letter-spacing:-.072em}
+.hero-caption p,.page-hero-bottom p,.contact-intro>p{font-size:17px!important;line-height:1.55!important}
+.contact-layout{display:block!important;padding-bottom:64px}
+.contact-intro{max-width:none!important}
+.contact-intro h1{max-width:none!important}
+.contact-intro>p{max-width:560px;margin-top:32px}
+.contact-intro .contact-details{margin-top:32px}
+.ebook-card .project-media{aspect-ratio:5/4!important;background:transparent!important}
+.ebook-card .project-media img{width:100%;height:100%;object-fit:contain!important;transform:none!important}
+.ebook-page-cover{width:100%;height:auto!important;aspect-ratio:5/4;object-fit:contain!important;background:transparent!important}
+.ebook-facts>span{display:inline-flex;align-items:center;gap:8px}
+.ebook-facts svg{width:18px;height:18px;flex-shrink:0;color:#b8f019}
+.ebook-inside .guide-chapter-icon{display:grid;place-items:center;flex:0 0 38px;width:38px;height:38px;padding:7px!important;border:0;border-radius:0;color:#b8f019}
+.guide-chapter-icon svg{width:23px;height:23px}
+[data-enquiry-form] .form-actions>.button,.ebook-form .form-actions>.button{width:230px!important;max-width:100%;flex-shrink:0}
+.blog-index[data-active-filter="Design Ebooks"] .ebook-collection>.blog-list-heading{display:none}
+.blog-index[data-active-filter="Design Ebooks"] .ebook-collection{margin-top:0}
+.proof-strip .proof-stat>div>span{display:block;text-align:left!important;line-height:1.45;max-width:none!important}
+.proof-strip .proof-stat>div{min-width:0}
+@media(max-width:1000px){
+.hero h1,.page-hero h1,.contact-intro h1{font-size:clamp(42px,8.4vw,68px)!important;line-height:1.14!important}
+}
+@media(max-width:600px){
+.hero h1,.page-hero h1,.contact-intro h1{font-size:clamp(34px,8.7vw,47px)!important;line-height:1.14!important}
+.hero-caption p,.page-hero-bottom p,.contact-intro>p{font-size:15px!important;line-height:1.55!important}
+.contact-intro h1>span{white-space:normal!important}
+.menu-button{width:46px!important;height:46px!important;min-width:46px;padding:0!important;border-radius:50%!important;display:grid;place-items:center}
+.footer-subscribe button{width:40px!important;height:40px!important;min-width:40px;flex:0 0 40px;border-radius:50%!important;padding:0!important;display:grid;place-items:center}
+.proof-strip{grid-template-columns:repeat(3,minmax(0,1fr))!important;column-gap:16px!important;row-gap:30px!important}
+.proof-strip .proof-stat,.proof-strip .proof-stat:nth-child(n){display:flex;flex-direction:column;align-items:flex-start!important;justify-content:flex-start!important;text-align:left!important;gap:10px;grid-column:auto;padding:0!important;min-width:0}
+.proof-strip .proof-stat>div{display:flex;flex-direction:column;align-items:flex-start;gap:5px;width:100%}
+.proof-strip .proof-stat>div>span{font-size:9.5px!important;align-self:flex-start!important;justify-self:start!important;text-align:left!important;white-space:nowrap}
+.proof-strip .proof-stat strong{font-size:27px!important;line-height:1.15}
+.proof-strip .proof-icon{width:20px;height:20px}
+.ebook-hero .ebook-facts{gap:14px 18px;font-size:11px}
+.ebook-facts>span{gap:6px}
+.ebook-facts svg{width:16px;height:16px}
+}
+.blog-index[data-active-filter="Design Ebooks"]>.blog-list-heading{display:none}
+@media(max-width:600px){
+.ebook-hero,.contact-connect{grid-template-columns:minmax(0,1fr)!important}
+.ebook-gate,.ebook-form,.enquiry-panel,[data-enquiry-form],.form-actions{min-width:0!important}
+.ebook-gate .form-actions>.button,[data-enquiry-form] .form-actions>.button{width:213px!important;max-width:100%!important}
+}
