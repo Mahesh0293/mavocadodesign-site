@@ -1,0 +1,21 @@
+/* Three content-sized blocks share the available width and equal intervening space. */
+.cs-problems{display:flex;justify-content:space-between;align-items:flex-start;gap:clamp(30px,4vw,64px);width:100%}
+.cs-problems>article{flex:0 1 auto;width:max-content;max-width:calc((100% - 96px)/3);min-width:0;margin:0}
+.cs-problems h3{font-size:clamp(20px,1.9vw,28px)}.cs-problems p{max-width:none}
+.np-supporting-full>div{display:grid;grid-template-columns:minmax(0,1fr);width:100%}.np-supporting-full figure,.np-supporting-full .cs-shot,.np-supporting-full img{width:100%;max-width:none}.np-supporting-full img{height:auto;object-fit:contain}
+@media(max-width:800px){.cs-problems{display:grid;grid-template-columns:minmax(0,1fr);gap:34px}.cs-problems>article{width:100%;max-width:none}.cs-problems h3{font-size:24px}}
+@media(max-width:600px){
+ .proof-strip{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;padding:32px 24px!important;gap:32px 14px!important;width:100%;min-height:0;overflow:visible}
+ .proof-strip .proof-marquee,.proof-strip .proof-group{display:contents!important;animation:none!important;transform:none!important;will-change:auto;padding:0}
+ .proof-strip .proof-group-copy{display:none!important}
+ .proof-strip .proof-stat,.proof-strip .proof-stat:nth-child(3n){display:flex;flex-direction:column;justify-content:flex-start!important;align-items:flex-start!important;width:100%!important;min-width:0!important;max-width:100%!important;gap:12px!important;justify-self:stretch;text-align:left!important}
+ .proof-strip .proof-stat>div,.proof-strip .proof-stat:nth-child(3n)>div{display:flex;flex-direction:column;align-items:flex-start!important;width:100%!important;max-width:100%;gap:8px}
+ .proof-strip .proof-stat>svg{width:20px!important;height:20px!important;flex-shrink:0}
+ .proof-strip .proof-stat strong{font-size:28px!important;line-height:1.2;white-space:nowrap}
+ .proof-strip .proof-stat>div>span,.proof-strip .proof-stat:nth-child(3n)>div>span{font-size:10px!important;line-height:1.5;max-width:100%;width:max-content;align-self:flex-start!important;text-align:left!important}
+ .proof-strip .proof-stat:nth-child(3n+2),.proof-strip .proof-stat:nth-child(3n+2)>div{align-items:center!important}
+ .proof-strip .proof-stat:nth-child(3n+2)>div>span{align-self:center!important}
+ .proof-strip .proof-stat:nth-child(3n),.proof-strip .proof-stat:nth-child(3n)>div{align-items:flex-end!important}
+ .proof-strip .proof-stat:nth-child(3n)>div>span{align-self:flex-end!important}
+}
+@media(max-width:360px){.proof-strip{column-gap:10px!important;row-gap:30px!important}.proof-strip .proof-stat strong{font-size:26px!important}.proof-strip .proof-stat>div>span,.proof-strip .proof-stat:nth-child(3n)>div>span{font-size:9.5px!important}}

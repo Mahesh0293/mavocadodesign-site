@@ -1,0 +1,18 @@
+MAVOCADO CONTENT TO ENQUIRY PATHS
+
+Upload all ZIP contents to your existing GitHub Pages repository, replace matching files, commit and push.
+
+LinkedIn post about enquiry UX / Your button is not the whole journey:
+https://mavocado.in/website-enquiry-ux.html
+
+Interactive Experience Lab:
+https://mavocado.in/experience-lab.html
+
+Website design article > NOX website project > website enquiry
+Startup UX guide > free audit form
+Nothing Pay concept case study > app design enquiry
+Design systems article > design systems service > requirements enquiry
+
+Enquiry forms include the originating content page and selected service as context. This is form attribution, not an analytics report or a guarantee of more leads.
+Project and audit forms submit through the connected Formspree endpoint.
+Ebook email delivery and newsletter subscriptions retain their separate existing setup.
