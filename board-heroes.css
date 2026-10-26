@@ -1,0 +1,32 @@
+/* Original artwork, optically equalised within one shared hero grid. */
+.hero.main-page-hero.has-board-hero,.text-only-hero.main-page-hero.has-board-hero{display:grid;grid-template-columns:minmax(0,1fr) 540px;column-gap:64px;row-gap:0;align-items:center;align-content:center;justify-content:normal}
+.main-page-hero.has-board-hero>.inner-hero-copy{width:100%;max-width:none;min-width:0;align-self:center}
+.main-page-hero.has-board-hero>.page-hero-art{display:block!important;position:relative;width:540px;aspect-ratio:1;justify-self:end;align-self:center;overflow:hidden;pointer-events:none;margin:0;min-height:0}
+.has-board-hero .page-hero-art>img{display:block;position:absolute;width:var(--board-width);max-width:none;height:auto;max-height:none;left:var(--board-left);top:var(--board-top);margin:0;padding:0;transform:none;object-fit:contain;filter:none;opacity:1}
+@media(max-width:1250px){.hero.main-page-hero.has-board-hero,.text-only-hero.main-page-hero.has-board-hero{grid-template-columns:minmax(0,1fr);gap:32px;align-content:start}.main-page-hero.has-board-hero>.inner-hero-copy{max-width:1100px}.main-page-hero.has-board-hero>.page-hero-art{width:440px;justify-self:end}}
+@media(max-width:700px){.hero.main-page-hero.has-board-hero,.text-only-hero.main-page-hero.has-board-hero{gap:28px;padding-bottom:56px}.main-page-hero.has-board-hero>.page-hero-art{width:100%;justify-self:center}}
+
+/* Align visible artwork and copy on a shared centre, independent of image padding. */
+.hero.main-page-hero.has-board-hero,.text-only-hero.main-page-hero.has-board-hero{padding-block:48px;grid-template-rows:auto}
+.main-page-hero.has-board-hero>.inner-hero-copy{position:relative;top:auto;transform:none;margin-block:0;align-self:center}
+.main-page-hero.has-board-hero>.page-hero-art{aspect-ratio:1.16;align-self:center}
+.has-board-hero .page-hero-art>img{top:50%;transform:translateY(var(--board-shift))}
+@media(max-width:1250px){.hero.main-page-hero.has-board-hero,.text-only-hero.main-page-hero.has-board-hero{row-gap:24px}}
+@media(max-width:700px){
+ .hero.main-page-hero.has-board-hero,.text-only-hero.main-page-hero.has-board-hero{min-height:0;padding:32px 20px 24px;row-gap:16px;align-content:start}
+ .main-page-hero.has-board-hero>.page-hero-art{margin:0;align-self:start}
+ .main-page-hero.has-board-hero+.section,.main-page-hero.has-board-hero+.studio-proof{margin-top:0;padding-top:32px}
+}
+
+/* Medium emphasis for main-page titles; retain the supplied Reckless face. */
+.main-page-hero> .inner-hero-copy>h1{font-weight:500!important;-webkit-text-stroke:.22px currentColor}
+.main-page-hero> .inner-hero-copy>h1 .heading-line{font-weight:inherit!important}
+@media(max-width:700px){.main-page-hero> .inner-hero-copy>h1{-webkit-text-stroke:.16px currentColor}}
+/* Place the shared hero above the viewport midpoint, with height-aware art. */
+@media(min-width:1251px){
+ .hero.main-page-hero.has-board-hero,.text-only-hero.main-page-hero.has-board-hero{--hero-art-size:min(540px,calc((100svh - 184px)*1.16));grid-template-columns:minmax(0,1fr) var(--hero-art-size);padding-top:32px;padding-bottom:176px}
+ .main-page-hero.has-board-hero>.page-hero-art{width:var(--hero-art-size)}
+}
+@media(min-width:1251px) and (max-height:760px){
+ .hero.main-page-hero.has-board-hero,.text-only-hero.main-page-hero.has-board-hero{padding-top:32px;padding-bottom:64px;align-content:start}
+}

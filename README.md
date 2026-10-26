@@ -1,9 +1,9 @@
-# GitHub upload
-Extract the ZIP and upload its contents to the root of your GitHub repository. index.html must be directly at the root. Include the complete assets folder.
+# Final Mavocado website — version 31
 
-For GitHub Pages: Settings > Pages > Deploy from a branch > main > /(root).
-Keep the existing CNAME file and domain settings if updating your mavocado.in repository.
+Replace the earlier upload with the extracted contents of this package. Put index.html at the repository root, alongside the CSS and JS files and the complete assets folder. Do not upload the ZIP or its enclosing folder.
 
-Alternative smaller downloads: extract Mavocado-01-Pages.zip and ALL Mavocado-Assets ZIPs into the SAME folder, merging the assets folders, then upload everything together. These are normal ZIP files, not multi-volume archives.
+Keep your existing CNAME file and domain settings. GitHub Pages should point to the branch and folder containing index.html. Wait for the Pages deployment to succeed, then press Ctrl+Shift+R or view in a private window.
 
-No installation or build command is required. Forms retain the existing Formspree endpoint.
+This package includes cache-versioned CSS and JS links. VERSION.txt identifies the final source. No build is required.
+
+If using smaller packages, extract Pages and ALL THREE Assets ZIPs into the same folder, merging assets, then upload the merged contents.

@@ -43,3 +43,15 @@ main h1,.inner-hero h1,.article-hero h1,.case-hero h1,.studio-inner-hero h1{font
 @media(max-width:700px){.article-layout>.article-sidebar a{font-size:12px}}
 .footer-columns>div>span,.proof-strip>.proof-item>span{font-family:var(--body-face)!important}.contact-redesign .enquiry-intro h3{font-size:var(--h3-size)}
 .hero h1{font-size:var(--h1-size);line-height:1.08}
+
+/* Original live-site 3D review avatars and medium project form titles. */
+.review figcaption .review-avatar{display:block;flex:0 0 56px;width:56px;height:56px;object-fit:contain;border:0;border-radius:50%;background:transparent;padding:0;box-shadow:none}
+[data-medium-project-title]{font-weight:500!important;-webkit-text-stroke:.18px currentColor}
+[data-medium-project-title] .heading-line{font-weight:inherit!important}
+@media(max-width:700px){.review figcaption .review-avatar{width:48px;height:48px;flex-basis:48px}[data-medium-project-title]{-webkit-text-stroke:.14px currentColor}}
+/* Slow, centred rotation of the line artwork only. */
+@keyframes service-orbit{from{transform:rotate(0turn)}to{transform:rotate(1turn)}}
+.service-panel>img,.catalog-art>img{transform-origin:50% 50%;animation:service-orbit 36s linear infinite;animation-play-state:paused}
+.service-panel>img.is-orbit-visible,.catalog-art>img.is-orbit-visible{animation-play-state:running}
+.service-panel:hover>img,.service-panel:focus-within>img,.catalog-card:hover .catalog-art>img,.catalog-card:focus-within .catalog-art>img{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.service-panel>img,.catalog-art>img{animation:none!important;transform:none!important}}
