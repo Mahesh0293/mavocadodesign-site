@@ -1,0 +1,15 @@
+/* Full-frame, uncropped service art and considered project-media spacing. */
+body .cs-motion{border:0!important;outline:0!important;box-shadow:none!important;margin-bottom:64px!important}
+body .project-video{display:block;width:100%;height:auto;border:0!important;outline:0!important;box-shadow:none!important;border-radius:0!important;background:#111;object-fit:contain}
+body .project-video:focus-visible{outline:2px solid #b8f019!important;outline-offset:6px}
+body .cs-motion+.cs-supporting-views{margin-top:64px!important}
+body .service-image:has(.service-visual41),body .catalog-art:has(.service-visual41),body .service-detail-art:has(.service-visual41){aspect-ratio:3/2!important;height:auto!important;min-height:0!important;padding:0!important;background:transparent!important;overflow:hidden}
+body .service-image:has(.service-visual41){width:100%!important;max-width:100%!important}
+body .service-visual41{display:block;width:100%!important;height:100%!important;max-width:100%;object-fit:contain!important;object-position:center!important;padding:0!important;margin:0!important;transform:none!important;filter:none!important;mix-blend-mode:normal!important}
+body .service-image:hover .service-visual41{transform:none!important}
+body .studio-portrait img{filter:grayscale(1)!important;transition:filter .65s ease}
+body .studio-portrait:hover img,body .studio-portrait:focus-visible img,body .studio-portrait:focus-within img{filter:grayscale(0)!important}
+body .studio-portrait:focus-visible{outline:2px solid #b8f019;outline-offset:6px}
+[hidden].resource-views{display:none!important}
+@media(max-width:700px){body .cs-motion{margin-bottom:40px!important}body .cs-motion+.cs-supporting-views{margin-top:40px!important}}
+@media(prefers-reduced-motion:reduce){body .studio-portrait img{transition:none}}

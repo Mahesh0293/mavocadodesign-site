@@ -1,0 +1,79 @@
+/* Shared finishing pass: homepage, editorial pages and project stories. */
+:root{--lime:#b8f019}
+.gallery-card{aspect-ratio:auto;height:calc(17vw / 1.5 + 12px);max-height:186px}
+.dark-inner .editorial-hero .inner-hero-copy{transform:translateY(-16px)!important}
+.hero-intro{position:relative;top:-16px}
+.editorial-footer .footer-pages nav a,.editorial-footer .footer-services nav a{font-family:'Inter Tight',Arial,sans-serif!important;font-size:18px!important;font-weight:500!important;line-height:1.35!important;letter-spacing:-.02em!important;text-transform:none!important}
+.editorial-footer .footer-call.audit-trigger{border-radius:14px!important;min-height:48px;padding:13px 20px;font:500 14px/1.3 'Inter Tight',Arial,sans-serif;gap:14px;box-shadow:none}
+.dark-inner .studio-biography h2{font-size:clamp(38px,4.5vw,68px)!important;font-weight:400!important;line-height:1.05!important;letter-spacing:-.05em!important;max-width:900px}
+.dark-inner .studio-biography h2 em{font-family:'Instrument Serif',Georgia,serif!important;font-style:italic;color:var(--lime);font-weight:400}
+/* Icons have no inherited full-width badge/background. */
+body .icon-badge,body .cs-delivery-icon{display:inline-flex!important;align-items:center;justify-content:flex-start;width:28px!important;height:28px!important;min-height:0!important;padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;color:var(--lime)!important;flex:none}
+.icon-badge svg,.cs-delivery-icon svg{width:25px!important;height:25px!important;display:block}
+.dark-inner .content-icon,.dark-inner .case-main svg{color:var(--lime)}
+.motion-card svg,.motion-icon svg{transform-origin:50% 50%;transition:transform .5s ease}
+.motion-card:hover svg,.motion-card:focus-within svg,.motion-icon:hover svg{transform:translateY(-3px) rotate(-7deg)}
+.motion-card.is-animated svg,.motion-icon.is-animated svg{animation:icon-greet 1.7s ease both}
+@keyframes icon-greet{0%,100%{transform:translateY(0) rotate(0)}35%{transform:translateY(-4px) rotate(-9deg)}65%{transform:translateY(0) rotate(5deg)}}
+.dark-inner .system-parts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:0;background:transparent;border:0}
+.dark-inner .system-parts>article{padding:28px;background:#1c1c1c!important;border:1px solid #303030;border-radius:16px;color:#f2f1ed;min-width:0;transition:border-color .4s,transform .5s}
+.dark-inner .system-parts>article:hover{border-color:#687e26;transform:translateY(-3px)}
+.dark-inner .system-parts h3{font:400 26px/1.15 'Inter Tight',Arial,sans-serif!important;color:#f2f1ed!important;white-space:normal;margin:24px 0 18px;min-height:0}
+.dark-inner .system-parts p,.dark-inner .cs-delivery-card p{font:400 16px/1.55 'Inter Tight',Arial,sans-serif!important;color:#aaa!important;min-height:0;max-height:none;display:block}
+.dark-inner .case-main .cs-story-copy{color:#999;font-size:13px}
+.dark-inner .case-main .cs-story-copy h3{color:#f2f1ed;white-space:normal;font-size:27px!important;line-height:1.18;margin:14px 0}
+.dark-inner .plain-note{padding:0!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;margin-top:22px}
+.dark-inner .plain-note summary{display:inline-flex;align-items:center;gap:10px;list-style:none;color:var(--lime)!important;font:500 14px/1.4 'Inter Tight',Arial,sans-serif;padding:8px 0;cursor:pointer}
+.plain-note summary::-webkit-details-marker{display:none}.plain-note summary svg{width:18px;height:18px;transition:transform .3s}.plain-note[open] summary svg{transform:rotate(90deg)}
+.dark-inner .plain-note>p{margin-top:14px;color:#aaa!important;font-size:15px!important}
+.dark-inner .button.tertiary,.dark-inner .tertiary-link,.dark-inner .article-view,.dark-inner .article-read,.dark-inner .article-actions .button.secondary,.dark-inner .cs-delivery-card>a,.dark-inner .cs-delivery-card>a>span{color:var(--lime)!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+.dark-inner .cs-delivery-card>a{padding:8px 0!important;margin-top:auto;font-size:14px}.dark-inner .cs-delivery-card>a>span{display:inline-flex;gap:10px;align-items:center}
+.dark-inner .cs-delivery-card>a svg,.resource-link svg{width:18px;height:18px;transition:transform .4s}
+.dark-inner .cs-delivery-card>a:hover svg,.article-card:hover .resource-link svg{transform:translateX(4px)}
+.dark-inner .cs-delivery-card h3{font-size:26px!important;min-height:0;line-height:1.15;margin:24px 0 16px}
+.dark-inner .cs-delivery-card{display:flex;flex-direction:column;gap:0;padding:28px;min-height:270px}
+.dark-inner .cs-delivery-card .delivery-summary{margin:0 0 22px}
+/* A connected, compact, keyboard-operable project timeline. */
+.timeline-head{background:linear-gradient(115deg,#262823,#202020);align-items:center}
+.timeline-head>p{font-size:14px;color:#999;line-height:1.55}
+.timeline-tabs{gap:12px;padding-top:28px}.timeline-tabs:before{top:78px;border-color:#4b4b44}
+.timeline-tabs button{display:grid!important;grid-template-columns:28px 1fr 20px;grid-template-rows:auto auto;gap:12px 10px!important;padding:18px!important;min-height:106px;text-align:left;isolation:isolate}
+.timeline-tabs button .week-label{grid-column:1/-1;font-size:10px;color:#9c9c94;letter-spacing:.09em;text-transform:uppercase}
+.timeline-tabs button .stage-icon{width:24px;height:24px;color:var(--lime);transition:transform .5s}
+.timeline-tabs button .stage-name{font-size:18px;color:#eee;font-weight:400}.timeline-tabs button i{font-size:20px;color:inherit}
+.timeline-tabs button[aria-selected=true]{transform:translateY(-3px);box-shadow:0 12px 28px #0003}
+.timeline-tabs button[aria-selected=true] :is(.week-label,.stage-icon,.stage-name){color:#182100}
+.timeline-tabs button:hover .stage-icon{transform:rotate(-10deg) scale(1.12)}
+.timeline-progress{height:2px;background:#353831;margin:22px 32px 0;overflow:hidden}.timeline-progress>span{display:block;height:100%;width:var(--timeline-progress,20%);background:var(--lime);box-shadow:0 0 12px #b8f01966;transition:width .65s cubic-bezier(.2,.7,.2,1)}
+.timeline-panels{min-height:142px;padding-top:24px}.timeline-panel h3{font-size:28px}.timeline-panel>span{font-size:12px}.timeline-panel p{font-size:16px}
+/* An understated rolling welcome accompanies the recognisable wordmark. */
+.site-header .brand{position:relative;overflow:visible}
+.site-header .brand-welcome{display:block!important;position:absolute;left:calc(100% * .153);bottom:-23px;height:16px;overflow:hidden;max-width:300px;color:#a4a49d;font:400 11px/16px 'Inter Tight',Arial,sans-serif!important;letter-spacing:.015em;pointer-events:none;white-space:nowrap}
+.brand-welcome .welcome-reel{display:flex;flex-direction:column;animation:welcome-roll 12s cubic-bezier(.65,0,.25,1) infinite}
+.welcome-reel>span{display:block;height:16px;flex:none}
+.site-header .brand-symbol{animation:brand-hello 12s ease-in-out infinite;transform-origin:center}
+.site-header.is-compact .brand-welcome{display:none!important}
+@keyframes welcome-roll{0%,25%{transform:translateY(0)}33%,58%{transform:translateY(-16px)}66%,91%{transform:translateY(-32px)}100%{transform:translateY(-48px)}}
+@keyframes brand-hello{0%,80%,100%{transform:rotate(0) scale(1)}84%{transform:rotate(-9deg) scale(.94)}90%{transform:rotate(8deg) scale(1.04)}95%{transform:rotate(-3deg) scale(1)}}
+/* Resource actions and truthful, shared view metadata. */
+.dark-inner .article-card-meta{gap:12px 14px;align-items:center;line-height:1.4}
+.article-card-meta .resource-author,.resource-views{display:inline-flex;align-items:center;gap:6px;font:400 12px/1.4 'Inter Tight',Arial,sans-serif;color:#999}
+.author-symbol{width:24px;height:24px;border:1px solid #3b3b3b;border-radius:50%;display:inline-grid;place-items:center;background:#222;flex:none}.author-symbol img{width:15px;height:15px;object-fit:contain}
+.resource-views svg{width:16px;height:16px;color:#999!important}.dark-inner .resource-link{display:inline-flex;font-size:14px;font-weight:500;gap:12px;margin-top:20px;padding:6px 0}
+.dark-inner .guide-card h3{line-height:1.16!important;min-height:2.32em;max-height:none!important;display:block!important;font-size:26px!important;margin-top:12px}
+.dark-inner .guide-card p{font-size:15px!important;line-height:1.5!important;min-height:3em;max-height:none!important;display:block!important;margin-bottom:18px}
+/* Form controls retain a clear focus state, with quieter resting borders. */
+.dark-inner :is(input,select,textarea){border-color:#ffffff24!important;transition:border-color .25s,box-shadow .25s}
+.dark-inner :is(input,select,textarea):focus{outline:none;border-color:var(--lime)!important;box-shadow:0 0 0 3px #b8f01915}
+.dark-inner select{appearance:none!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23b8f019' stroke-width='1.5'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 16px center!important;padding-right:46px!important;padding-left:16px!important;color-scheme:dark}
+.dark-inner select option{background:#202020;color:#eee}.dark-inner .enquiry-intro>p{font-size:16px!important;line-height:1.55!important;max-width:600px;margin:16px 0 0}
+.dark-inner .contact-direct.contact-direct-plain{background:transparent!important;border:0!important;border-top:1px solid #303030!important;border-radius:0!important;padding:30px 0 0!important;color:#eee!important;box-shadow:none!important}
+.dark-inner .contact-direct-plain h3{color:#eee!important;font-size:30px!important;line-height:1.2;max-width:400px;margin:18px 0}
+.dark-inner .contact-direct-plain p{color:#aaa!important;font-size:16px!important;line-height:1.55!important;max-width:none}
+.dark-inner .conversation-mark.animated-contact-mark{display:block;width:128px!important;height:128px!important;object-fit:contain;background:transparent!important;border:0;border-radius:0;box-shadow:none;padding:0;margin:38px 0;animation:contact-mark-breathe 7s ease-in-out infinite;filter:none}
+@keyframes contact-mark-breathe{0%,100%{transform:rotate(0deg) scale(1)}30%{transform:rotate(-12deg) scale(.94)}65%{transform:rotate(9deg) scale(1.06)}}
+@media(max-width:1180px){.editorial-footer .footer-pages nav a,.editorial-footer .footer-services nav a{font-size:16px!important}.timeline-tabs button{padding:16px 12px!important;column-gap:7px!important}.timeline-tabs button .stage-name{font-size:16px}}
+@media(max-width:700px){.gallery-card{height:149px;max-height:none}.site-header .brand-welcome{font-size:9px!important;bottom:-18px;left:43px;height:16px}.hero-intro{top:-16px}.dark-inner .system-parts{grid-template-columns:1fr}.timeline-head>p{font-size:12px}.timeline-tabs{padding:22px 12px 0;gap:5px}.timeline-tabs button{display:flex!important;flex-direction:column;align-items:center;justify-content:center;min-height:106px;padding:12px 3px!important;gap:9px!important;text-align:center}.timeline-tabs button .week-label{font-size:8px;letter-spacing:.01em}.timeline-tabs button .stage-icon{width:20px;height:20px}.timeline-tabs button .stage-name{font-size:12px}.timeline-tabs:before{top:76px;left:18px;right:18px}.timeline-progress{margin:20px 20px 0}.timeline-panels{min-height:230px}.timeline-panel h3{font-size:24px}.timeline-panel p{font-size:14px}.timeline-panel>span{font-size:11px}.dark-inner .guide-card p{font-size:14px!important}.dark-inner .enquiry-intro>p br,.dark-inner .contact-direct-plain p br{display:none}.editorial-footer .footer-call.audit-trigger{min-height:44px;font-size:13px;padding:12px 16px}.dark-inner .conversation-mark.animated-contact-mark{width:100px!important;height:100px!important}.dark-inner .cs-delivery-card{min-height:0}.dark-inner .studio-biography h2{font-size:38px!important}}
+@media(prefers-reduced-motion:reduce){.welcome-reel,.brand-symbol,.animated-contact-mark,.motion-card svg,.motion-icon svg{animation:none!important}.timeline-progress>span{transition:none}.timeline-tabs button,.motion-card svg,.motion-icon svg{transition:none}}
+.site-header .brand-welcome .welcome-reel,.site-header .welcome-reel>span{font:inherit!important;letter-spacing:inherit!important;text-transform:none!important}
+.dark-inner .conversation-mark.animated-contact-mark{mix-blend-mode:normal!important;opacity:1!important}

@@ -1,0 +1,7 @@
+Version 41
+28 HTML pages checked.
+All local HTML/CSS asset references resolve with exact filenames.
+All JavaScript files pass Node syntax checks.
+All PNG/JPEG/WebP assets decode successfully.
+Local MP4 video included.
+Static export disables unavailable database view-count requests.
